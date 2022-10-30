@@ -1,2 +1,31 @@
-<p>servers works!</p>
+<label>Server Name</label>
+<!--WIth the input binding method and use of $event the information we type will be printed to the screen
+    This works because of the "HTMLInputElement" that we casted-->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+
+<p style="color:blue">This is our two way biding example</p> -->
+<input type="text" class="form-control" [(ngModel)] ="serverName">
+<!-- <p>{{serverName}}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> 
+<!--The button will be disabled after 2 ms based on the function we created-->
+<!--This is due to data binding and with angular allowing dynamic actions-->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!--innerText is another way that we can use property binding-->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
+<app-server></app-server>
+
+
+<!--Practice Assignment -->
+<!--Input filed that updates a property ('username') via Two-Way-Binding-->
+<br><br>
+<h1>Second Assignment</h1>
+<input type="text" class="form-control" [(ngModel)] = "userName">
+<p>Your username is {{userName}}</p>
+<button class="btn btn-primary"  [disabled]="!userName" (click)="onEmptyString()">Update Username</button>
+
+<!--Practice Assignment -->
+
+
+
+<!--click and click output data when they're clicked. The input outputs data as well with $event-->
