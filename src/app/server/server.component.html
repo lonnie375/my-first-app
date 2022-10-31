@@ -1,1 +1,10 @@
-<p>{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
+<!--Added ngStyle with is a attribute directive. 
+    It is used to change the appearance of text on the screen and changes the DOM
+    we can use this like we would style in css but we can use methods with it as well
+    the styling attribute should be in Camel Case-->
+<!--ngClass is used here as well. We added styles in the component section and determined this to be white
+    this is white only if the serverStatus is online.
+    We could use a method to display this as well. -->   
+<p [ngStyle]="{'backgroundColor': getColor()}" [ngClass]="{online: serverStatus === 'online'}">{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
+
+

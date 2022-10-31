@@ -6,11 +6,12 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { Assign3Component } from './assign3/assign3.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    ServerComponent, ServersComponent, WarningComponent, SuccessComponent
+    ServerComponent, ServersComponent, WarningComponent, SuccessComponent, Assign3Component
   ],
   imports: [
     BrowserModule, 

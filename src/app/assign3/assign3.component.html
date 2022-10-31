@@ -1,0 +1,8 @@
+<!--Add a button which says "Display Details"-->
+<button class="btn btn-primary" (click)="onClick()">Display Details</button>
+<p *ngIf="buttonClick">{{myPath}}</p>
+<div *ngFor="let count of countArray">
+    <p [ngStyle]="{backgroundColor: getColor()}">{{count}}</p>
+
+</div>
+

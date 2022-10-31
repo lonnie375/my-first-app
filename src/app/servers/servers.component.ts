@@ -11,6 +11,9 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created'; 
   serverName = 'TestServer';
   userName = ''; 
+  serverCReated = false; 
+  //Created an array 
+  servers = ['Testserver', 'Testserver 2']; 
   //The method in the constructor doesn't have to be called because it's in the constructor lol
   
   constructor() {
@@ -24,8 +27,14 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+      this.serverCReated = true; 
+
+      //Added to the array we created 
+      //Using the information the user provides and adds this to our list 
+      this.servers.push(this.serverName); 
       this.serverCreationStatus = 'Server was created! Name is ' + this.serverName; 
-  }
+    
+    }
 
   //This is explicit casting using the HTML Input Element
   //Event is an interface thats created on the DOM 
